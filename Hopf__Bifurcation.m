@@ -12,12 +12,12 @@ close all;function Hopf_Bifurcation()
     s = 4;
     I = 0.8;
     xr = (c/d)^(1/2); % calculate xr
-    
+   
     % create meshgrid for phase plane plot
     x1 = linspace(-4, 4, 20);
     x2 = linspace(-4, 4, 20);
     [X1, X2] = meshgrid(x1, x2);
-    
+       
     % evaluate the system's derivatives at each point on the grid
     x1dot = X2 - a*X1.^3 + b*X1.^2 + I - X2;
     x2dot = c - d*X1.^2 - X2;
